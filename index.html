@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Miguel Moura</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800, // Duração da animação em ms
+    once: true     // Anima só uma vez
+  });
+</script>
+<body>
+  <header class="header">
+  <div class="container">
+    <div class="logo">
+      <a href="/">Miguel Moura</a>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#servicos">Servicos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="cta">
+      <a href="#contato" class="btn">Vamos conversar</a>
+    </div>
+  </div>
+</header>
+
+<section id="inicio" class="hero" >
+  <div class="container hero-content">
+    <h1>Ola, eu sou Miguel Moura</h1>
+    <p>Desenvolvedor de jogos e Programador java</p>
+    <a href="#projetos" class="btn">Ver projetos</a>
+  </div>
+</section>
+
+<section id="projetos" class="section projetos">
+  <div class="container">
+    <h2>Projetos em destaque</h2>
+    <div class="grid-projetos">
+      <div class="card">
+        <h3>App de Estoque</h3>
+        <p>Aplicacao Java com CRUD para controle de produtos e clientes.</p>
+      </div>
+      <div class="card">
+        <h3>Jogo Vast</h3>
+        <p>Jogo sci-fi de sobrevivencia em terceira pessoa com crafting e ewxploracao.</p>
+      </div>
+      <div class="card">
+        <h3>Deep Layer</h3>
+        <p>Plataforma 2D estilo Limbo com atmosfera sombria e gameplay envolvente</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="footer">
+  <div class="container">
+    <h2>Contato</h2>
+    <p>Email: miguelmoural826@gmail.com</p>
+    <p>Github: <a href="https://github.com/miguelpzks" target="_blank">/seuGithub</a></p>
+    <p>Linkedin: <a href="https://www.linkedin.com/in/miguel-moura-24b043266/" target="_blank">/seuLinkedin</a></p>
+    <p>&copy; 2025 Miguel Moura. Todos os direitos reservados.</p>
+  </div>
+</section>
+</body>
+</html>
