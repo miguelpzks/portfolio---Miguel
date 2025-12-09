@@ -1,78 +1,207 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Miguel Moura</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Miguel Moura</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800, // Duração da animação em ms
-    once: true     // Anima só uma vez
-  });
-</script>
+
 <body>
-  <header class="header">
-  <div class="container">
-    <div class="logo">
-      <a href="/">Miguel Moura</a>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="/">Miguel Moura</a>
+        </div>
+
+        <!-- MENU DESKTOP -->
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- BOTÃO CTA -->
+        <div class="cta">
+            <a href="#contato" class="btn">Contato</a>
+        </div>
+
+        <!-- HAMBURGUER MENU -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#servicos">Servicos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
-    <div class="cta">
-      <a href="#contato" class="btn">Vamos conversar</a>
+    <!-- MENU MOBILE -->
+    <div class="mobile-menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
     </div>
-  </div>
 </header>
 
-<section id="inicio" class="hero" >
-  <div class="container hero-content">
-    <h1>Ola, eu sou Miguel Moura</h1>
-    <p>Desenvolvedor de jogos e Programador java</p>
-    <a href="#projetos" class="btn">Ver projetos</a>
-  </div>
-</section>
-
-<section id="projetos" class="section projetos">
-  <div class="container">
-    <h2>Projetos em destaque</h2>
-    <div class="grid-projetos">
-      <div class="card">
-        <h3>App de Estoque</h3>
-        <p>Aplicacao Java com CRUD para controle de produtos e clientes.</p>
-      </div>
-      <div class="card">
-        <h3>Jogo Vast</h3>
-        <p>Jogo sci-fi de sobrevivencia em terceira pessoa com crafting e ewxploracao.</p>
-      </div>
-      <div class="card">
-        <h3>Deep Layer</h3>
-        <p>Plataforma 2D estilo Limbo com atmosfera sombria e gameplay envolvente</p>
-      </div>
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <div class="container hero-content" data-aos="fade-up">
+        <h1>Olá, eu sou Miguel Moura</h1>
+        <p>Desenvolvedor de jogos e Programador Júnior</p>
+        <a href="#projetos" class="btn">Ver projetos</a>
     </div>
-  </div>
 </section>
 
-<section id="contato" class="footer">
-  <div class="container">
-    <h2>Contato</h2>
-    <p>Email: miguelmoural826@gmail.com</p>
-    <p>Github: <a href="https://github.com/miguelpzks" target="_blank">/seuGithub</a></p>
-    <p>Linkedin: <a href="https://www.linkedin.com/in/miguel-moura-24b043266/" target="_blank">/seuLinkedin</a></p>
-    <p>&copy; 2025 Miguel Moura. Todos os direitos reservados.</p>
-  </div>
+<!-- PROJETOS -->
+<section id="projetos" class="section projetos">
+    <div class="container">
+        <h2 data-aos="fade-up">Projetos em destaque</h2>
+
+        <div class="grid-projetos" data-aos="fade-up" data-aos-delay="150">
+            <div class="card">
+                <h3>App de Estoque</h3>
+                <p>Aplicação Java com CRUD para controle de produtos e clientes.</p>
+            </div>
+
+            <div class="card">
+                <h3>Jogo Vast</h3>
+                <p>Jogo sci-fi de sobrevivência em terceira pessoa com crafting e exploração.</p>
+            </div>
+
+            <div class="card">
+                <h3>Deep Layer</h3>
+                <p>Plataforma 2D estilo Limbo com atmosfera sombria e gameplay envolvente.</p>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="section servicos">
+    <div class="container">
+        <h2 data-aos="fade-up">Serviços</h2>
+        <p class="servicos-subtitle" data-aos="fade-up" data-aos-delay="100">
+            Soluções profissionais desenvolvidas para atender diferentes necessidades.
+        </p>
+
+        <div class="servicos-cards" data-aos="fade-up" data-aos-delay="150">
+
+            <div class="card">
+                <div class="icone">⚙️</div>
+                <h3>Desenvolvimento Web</h3>
+                <p>Criação de sites modernos, rápidos e totalmente responsivos.</p>
+            </div>
+
+            <div class="card">
+                <div class="icone">📱</div>
+                <h3>Apps Mobile</h3>
+                <p>Aplicativos Android com interfaces limpas e alto desempenho.</p>
+            </div>
+
+            <div class="card">
+                <div class="icone">🎮</div>
+                <h3>Desenvolvimento de Jogos</h3>
+                <p>Criação de jogos na Unreal Engine, incluindo sistemas e interfaces.</p>
+            </div>
+
+            <div class="card">
+                <div class="icone">🎨</div>
+                <h3>Design UI/UX</h3>
+                <p>Interfaces profissionais pensando em experiência e estética.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="section contato">
+    <div class="container">
+        <h2 data-aos="fade-up">Entre em Contato</h2>
+
+        <p class="contato-sub" data-aos="fade-up" data-aos-delay="100">
+            Está precisando de um site, aplicativo ou jogo? Envie sua mensagem e retornarei rapidamente!
+        </p>
+
+        <div class="contato-grid">
+
+            <!-- FORMULÁRIO -->
+            <form class="contato-form" data-aos="fade-right" data-aos-delay="150">
+                <div class="input-group">
+                    <label>Nome</label>
+                    <input type="text" placeholder="Seu nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Seu email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Mensagem</label>
+                    <textarea rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+
+            <!-- LINKS DE CONTATO -->
+            <div class="contato-info" data-aos="fade-left" data-aos-delay="200">
+
+                <h3>Outros meios de contato</h3>
+
+                <p><strong>Email:</strong> miguelmoural826@gmail.com</p>
+
+                <p><strong>WhatsApp:</strong>
+                    <a href="https://wa.me/55999999999" target="_blank">
+                        Clique para chamar no WhatsApp
+                    </a>
+                </p>
+
+                <p><strong>GitHub:</strong>
+                    <a href="https://github.com/miguelpzks" target="_blank">/miguelpzks</a>
+                </p>
+
+                <p><strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/miguel-moura-24b043266/" target="_blank">
+                        /miguel-moura
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+        <p class="copy">© 2025 Miguel Moura. Todos os direitos reservados.</p>
+    </div>
+</section>
+
+<!-- JS AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true })</script>
+
+<!-- SCRIPT DO MENU MOBILE -->
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+    });
+</script>
+
 </body>
 </html>
