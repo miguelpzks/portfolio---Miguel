@@ -335,17 +335,13 @@ body {
     text-decoration: underline;
 }
 
-/* ===================================
-   RESPONSIVIDADE DO FORMULÁRIO
-=================================== */
-
 @media (max-width: 800px) {
     .contato-grid {
         grid-template-columns: 1fr;
     }
 
     .contato-form {
-        padding: 28px;
+        padding: 15px;
     }
 }
 
@@ -389,7 +385,7 @@ body {
 
 @media (max-width: 1000px) {
     .servicos-cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1fr);
     }
 }
 

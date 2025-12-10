@@ -135,23 +135,23 @@
             <form class="contato-form" data-aos="fade-right" data-aos-delay="150">
                 <div class="input-group">
                     <label>Nome</label>
-                    <input type="text" placeholder="Seu nome" required>
+                    <input type="text" name="nome" placeholder="Seu nome" required>
                 </div>
 
                 <div class="input-group">
                     <label>Email</label>
-                    <input type="email" placeholder="Seu email" required>
+                    <input type="email" name="email" placeholder="Seu email" required>
                 </div>
 
                 <div class="input-group">
                     <label>Mensagem</label>
-                    <textarea rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+                    <textarea name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn">Enviar Mensagem</button>
             </form>
 
-            <!-- LINKS DE CONTATO -->
+            <!-- OUTRA COLUNA -->
             <div class="contato-info" data-aos="fade-left" data-aos-delay="200">
 
                 <h3>Outros meios de contato</h3>
@@ -159,7 +159,7 @@
                 <p><strong>Email:</strong> miguelmoural826@gmail.com</p>
 
                 <p><strong>WhatsApp:</strong>
-                    <a href="https://wa.me/55999999999" target="_blank">
+                    <a href="https://wa.me/5521979915278" target="_blank">
                         Clique para chamar no WhatsApp
                     </a>
                 </p>
@@ -181,6 +181,8 @@
     </div>
 </section>
 
+
+
 <!-- JS AOS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init({ duration: 800, once: true })</script>
@@ -201,6 +203,49 @@
             mobileMenu.classList.remove('active');
         });
     });
+</script>
+
+<!-- SCRIPT EMAILJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+(function() {
+    emailjs.init("olWSB0CdbKCkXeUXM");
+})();
+
+const form = document.querySelector('.contato-form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const button = form.querySelector('button');
+    button.disabled = true;
+    button.innerText = "Enviando...";
+
+    const nome = form.nome.value.trim();
+    const email = form.email.value.trim();
+    const mensagem = form.mensagem.value.trim();
+
+    if (!nome || !email || !mensagem) {
+        alert("Preencha todos os campos antes de enviar.");
+        button.disabled = false;
+        button.innerText = "Enviar Mensagem";
+        return;
+    }
+
+    emailjs.sendForm("service_enviar_email", "template_enviar", form)
+        .then(() => {
+            alert("Mensagem enviada com sucesso!");
+            form.reset();
+        })
+        .catch((error) => {
+            console.error("Erro ao enviar:", error);
+            alert("Ocorreu um erro ao enviar sua mensagem. Tente novamente.");
+        })
+        .finally(() => {
+            button.disabled = false;
+            button.innerText = "Enviar Mensagem";
+        });
+});
 </script>
 
 </body>
