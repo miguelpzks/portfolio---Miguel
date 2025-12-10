@@ -17,8 +17,10 @@ body {
 .container {
     width: 100%;
     max-width: 1200px;
+    height: auto;
     margin: auto;
     padding: 0 20px;
+    border: none;
 }
 
 /* ===================================
@@ -26,13 +28,12 @@ body {
 =================================== */
 .header {
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     z-index: 999;
+    border: 1px solid #00aaff;
 }
 
 .header .container {
@@ -75,6 +76,7 @@ body {
 .btn {
     padding: 10px 22px;
     border-radius: 8px;
+    border: 1px solid #00aaff;
     background: linear-gradient(135deg, #00aaff, #0066cc);
     color: white;
     text-decoration: none;
@@ -83,7 +85,9 @@ body {
 }
 
 .btn:hover {
-    opacity: .9;
+    opacity: .80;
+    transform: scale();
+    border-color: #fff;
 }
 
 /* ===================================
@@ -115,12 +119,14 @@ body {
 /* Animação do X */
 .hamburger.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
+    background: #00aaff;
 }
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
 .hamburger.active span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+    background: #00aaff;
 }
 
 /* Menu Mobile */
@@ -140,19 +146,20 @@ body {
 }
 
 .mobile-menu.active {
-    height: 240px;
+    height: 220px;
+    background: #00aaff;
 }
 
 .mobile-menu a {
     padding: 14px 0;
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.1rem;
     transition: .3s;
 }
 
 .mobile-menu a:hover {
-    color: #00aaff;
+    color: #fff;
 }
 
 /* ===================================
@@ -168,6 +175,13 @@ body {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    transition: .35s;
+}
+
+.textanimation {
+    color: #00aaff;
+    animation: MudarCor 5s infinite ease-in-out,
+               MovimentarTexto 5s infinite ease-in-out;
 }
 
 .hero p {
@@ -199,7 +213,20 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-20px);
+    border-color: #00aaff;
+}
+
+.card-sevicos {
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: .3s;
+}
+
+.card-sevicos:hover {
+    transform: translateY(-50px);
     border-color: #00aaff;
 }
 
@@ -243,7 +270,7 @@ body {
 
 .contato-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr;
     gap: 40px;
     margin-top: 40px;
 }
@@ -295,7 +322,8 @@ body {
     width: 100%;
     padding: 14px;
     background: linear-gradient(135deg, #00aaff, #0066cc);
-    border: none;
+    border: 3px solid #fff;
+    border-color: #222;
     color: #fff;
     font-size: 1.1rem;
     font-weight: bold;
@@ -305,9 +333,15 @@ body {
 }
 
 .contato-form button:hover {
-    opacity: .85;
+    opacity: .70;
+    border-color: #fff;
 }
 
+.copy {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px; 
+}
 /* -----------------------------------
    LADO DIREITO DO CONTATO
 ----------------------------------- */
@@ -333,6 +367,24 @@ body {
 
 .contato-info a:hover {
     text-decoration: underline;
+}
+
+/* -----------------------------------
+   ANIMACOES
+----------------------------------- */
+
+@keyframes MudarCor {
+    0% { color: blue;}
+    25% { color: green;}
+    50% { color: red;}
+    75% { color: orange;}
+    100% { color: blue;}
+}
+
+@keyframes MovimentarTexto {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
 }
 
 @media (max-width: 800px) {
@@ -379,7 +431,7 @@ body {
     }
 
     .header .container {
-        padding: 0 16px; /* <-- Espaço extra nas laterais */
+        padding: 16px;
     }
 }
 
@@ -408,6 +460,9 @@ body {
     }
 
     .card {
+        padding: 30px 20px;
+    }
+    .card-sevicos {
         padding: 30px 20px;
     }
 }
